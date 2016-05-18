@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<versionInfo description="版本信息">
+		<version description="系统版本号" showEnable="false">1.1.0.1</version>
+	</versionInfo>
+	<sessionInfo description="会话信息">
+		<timeout description="会话超时时间，单位分钟" showEnable="true">10</timeout>
+	</sessionInfo>
+</root>

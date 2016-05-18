@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+<title>用户信息</title>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<@sys.script/>
+<script type="text/javascript" src="${path!}/view/user/editPwd.js"></script>
+<style type="text/css">
+a {
+	cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+<@sys.index_top/>
+	<div class="ssxx-titlessxx">&nbsp;&nbsp;&nbsp;当前位置：用户管理  >> 修改密码</div>
+	<input type="hidden" id="userId" name="userId"
+				value="${UserInfo.userId}" />
+				<form id="form1">
+	<table class="systemConfigTb"
+			style="width: 38%; left: 32%; position: absolute; margin-top: 43px; border: 1px solid #DDD;">
+			<tr height="40px;">
+				<td style="width: 27%;">原密码：</td>
+				<td><input id="passwordOld" name="passwordOld"
+						type="password" value="" dataType="password"
+						msg="密码只能为数字和字母，长度6到12位" /></td>
+			</tr>
+			<tr height="40px;">
+			<td >密码：</td>
+			<td><input id="password" name="password"
+						type="password" value="" dataType="password"
+						msg="密码只能为数字和字母，长度6到12位" /></td>
+			</tr>
+			
+			<tr height="40px;">
+				<td>确认密码：</td>
+				<td><input id="password2" name="password2"
+						type="password" value="" dataType="password"
+						msg="密码只能为数字和字母，长度6到12位" /></td>
+			</tr>
+			
+			<tr height="40px;">
+			<td colspan="2" align="center">
+				<div style="text-align: center;">
+
+		<a href="javascript:void(0);" id="userbutton"
+			style="margin-right: 10px;" class="easyui-linkbutton l-btn"><span
+			class="l-btn-left"><span class="l-btn-text">保存</span></span></a> <a
+			href="javascript:void(0)" onclick="javascript:history.go(-1)"
+			id="saveButton" style="margin-right: 10px;"
+			class="easyui-linkbutton l-btn"><span class="l-btn-left"><span
+				class="l-btn-text">返回</span></span></a>
+	</div>
+				
+			</td>
+			</tr>
+			
+			
+		</table>
+		</form>
+			<@sys.index_bottom/>
+</body>
+</html>

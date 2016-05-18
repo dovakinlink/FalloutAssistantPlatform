@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+<title>字典信息</title>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<@sys.script/>
+<script type="text/javascript" src="${path!}/view/dict/list.js"></script>
+<style type="text/css">
+a {
+	cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+	<@sys.index_top/>
+	<div class="ssxx-titlessxx">&nbsp;&nbsp;&nbsp;当前位置：字典管理 >> 列表</div>
+	<div class="ssxx-kuangkuang">
+		<form id="searchForm" method="post">
+			<ul>
+				
+				<li><span class="cff-2">字典名称：</span><select id="dictId"
+					name="dictId">
+						<option value="" selected="selected">-- 全部 --</option>
+						<option value="10001">餐厅</option>
+						<option value="10002">积分类型</option>
+				</select></li>
+				<li><a id="search" name="search"
+					href="${path}/sso/dict/index.do?url=dict/add" style="margin-right: 10px;"
+					class="easyui-linkbutton l-btn"><span class="l-btn-left"><span
+							class="l-btn-text">新增</span></span></a>&nbsp;&nbsp;&nbsp;<a id="search" name="search"
+					href="javascript:listJs.searchList();" style="margin-right: 10px;"
+					class="easyui-linkbutton l-btn"><span class="l-btn-left"><span
+							class="l-btn-text">检索</span></span></a></li>
+			</ul>
+		</form>
+
+	</div>
+	<div style="clear: both;">&nbsp;</div>
+	<div class="module_content"
+		style="position: relative; top: -10px; padding-top: 0;">
+		<table class="tablesorter" cellspacing="0">
+			<thead>
+				<tr>
+					<th scope="col" style="width: 15%;">字典类型</th>
+					<th style="width: 25%;">字典项代码</th>
+					<th style="width: 10%;">字典项名称</th>
+					<th style="width: 10%;">排序</th>
+					<th style="width: 10%;">预留字段1</th>
+					<th style="width: 15%;">创建时间</th>
+					<th style="width: 15%;">操作</th>
+				</tr>
+			</thead>
+
+			<tbody id="list_tmp" class="none">
+				<tr>
+					<td title="@{dictName}">@{dictName}</td>
+					<td title="@{itemId}">@{itemId}</td>
+					<td title="@{name}">@{name}</td>
+					<td title="@{seq}">@{seq}</td>
+					<td title="@{reserve1}">@{reserve1}</td>
+					<td title="@{createTime}">@{createTime}</td>
+					<td><a
+						href="${path}/sso/dict/index.do?url=dict/edit&itemId=@{itemId}"><img
+							src="${path!}/css/themes/default/system/images/xiugai.png"
+							title="编辑" /> </a> &nbsp;&nbsp;<a name="deleteButton"
+						data-id="@{itemId}" href="javascript:void(0)"><img
+							src="${path!}/css/themes/default/system/images/del.png"
+							title="删除" /></a></td>
+				</tr>
+			</tbody>
+		</table>
+		<@sys.page/>
+	</div>
+	<@sys.index_bottom/>
+	<input type="hidden" id="user_page_list" value="user_page" />
+</body>
+</html>

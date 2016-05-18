@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+<title>用户信息</title>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<@sys.script/>
+<script type="text/javascript" src="${path!}/view/user/edit.js"></script>
+</head>
+
+<body>
+	<@sys.index_top/>
+	<div class="ssxx-titlessxx">&nbsp;&nbsp;&nbsp;当前位置：用户管理 >> 修改</div>
+	<div>&nbsp;</div>
+	<input type="hidden" id="sessionId" name="sessionId"
+		value="${Session.sysUserSessionInfo.userId!}" />
+	<input type="hidden" id="userId" name="userId"
+		value="${UserInfo.userId}" />
+	<form id="form1" style="margin-top: 10px;">
+		<table class="systemConfigTb"
+			style="width: 38%; left: 32%; position: absolute; margin-top: 43px; border: 1px solid #DDD;">
+			<tr height="40px;">
+				<td style="width: 27%;">用户名：</td>
+				<td><span id="userName"></span></td>
+			</tr>
+			<tr height="40px;">
+				<td>姓名：</td>
+				<td><input id="userRealName" name="userRealName"
+					style="width: 64%;" type="text" value="" dataType="Require"
+					msg="姓名不能为空" /></td>
+			</tr>
+
+			<tr height="40px;">
+				<td>用户类型：</td>
+				<td><select id="userType" name="userType"
+					style="width: 64%; margin-left: 0px;" style="width: 20%;">
+						<option value="0" selected="selected">管理员</option>
+						<option value="1">第三方用户</option>
+				</select></td>
+			</tr>
+
+			<tr height="40px;">
+				<td colspan="2" align="center">
+					<div style="text-align: center;">
+
+						<a href="javascript:void(0);" id="userbutton"
+							style="margin-right: 10px;" class="easyui-linkbutton l-btn"><span
+							class="l-btn-left"><span class="l-btn-text">保存</span></span></a> <a
+							href="javascript:void(0)" onclick="javascript:history.go(-1)"
+							id="saveButton" style="margin-right: 10px;"
+							class="easyui-linkbutton l-btn"><span class="l-btn-left"><span
+								class="l-btn-text">返回</span></span></a>
+					</div>
+				</td>
+			</tr>
+
+		</table>
+	</form>
+	<@sys.index_bottom/>
+</body>
+</html>

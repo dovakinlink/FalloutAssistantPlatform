@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>登录</title>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<@sys.script/>
+<script type="text/javascript" src="${path!}/view/login/login.js"></script>
+<link href="${path!}/view/login/fresh/css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="${path!}/css/themes/default/easyUI/easyui.css"/>
+<link rel="stylesheet" type="text/css" href="${path!}/css/themes/default/easyUI/icon.css"/>
+</head>
+
+<body>
+
+<div class="container">
+	<div class="login-new-logo22">
+       管理系统
+    </div>
+	<div class="login-text">
+      <form id="form1">
+    	<div class="login-k"><p>用户名：</p><input id="username" name="username" type="text" autocomplete='off' class="easyui-validatebox" maxlength="20" value="" dataType="Require" msg="用户名不能为空" /></div>
+        <div class="login-k"><p>密　码：</p><input id="password" name="password" type="password" class="easyui-validatebox" maxlength="20" dataType="Require" msg="密码不能为空" /></div>
+     
+      </form>
+        <div class="login-k"><p>&nbsp;</p><a class="login-dl" id="loginImg" href="javascript:void(0)">登录</a></div>
+    </div>
+
+      
+</div>
+<!--  
+	<div style="margin: 120px auto auto auto;">
+		<form id="form1">
+
+			<article class="module width_quarter auto">
+				<header>
+					<h3 class="tabs_involved textcenter">升级服务管理平台</h3>
+				</header>
+
+				<fieldset style="width:95%;" class="auto">
+					<div>
+						<br /> <label>用户名</label><br /> <input type="text" id="username"
+							name="username" value="" dataType="Require" msg="用户名不能为空" />
+					</div>
+					<br />
+					<div>
+						<label>密码</label> <br /> <input type="password" id="password"
+							name="password" value="" dataType="Require" msg="密码不能为空" />
+					</div>
+					<br /> <br /> <input class="alt_btn auto" id="loginImg"
+						type="button" value="登录" /> <br />
+				</fieldset>
+			</article>
+		</form>
+	</div>
+	-->
+</body>
+</html>

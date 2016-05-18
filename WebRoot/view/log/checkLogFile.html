@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>查看日志文件</title>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<@sys.script/>
+<script type="text/javascript" src="${path!}/view/log/checkLogFile.js"></script>
+</head>
+
+<body>
+	<@sys.index_top/>
+
+			<header>
+			 
+				 <div class="ssxx-titlessxx">&nbsp;&nbsp;&nbsp;当前位置：日志管理  >> 日志查看</div>
+				 
+				 <div>&nbsp;</div>
+				<div style="border: 1px solid #DDD; margin-left: 3%;width: 94%;margin-top: 20px; padding: 1px;">
+				<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					<span class="cff-2">文件:</span> <select id="logFile" name="logFile">
+					</select>
+					<span class="cff-2">显示行数：</span><input type="text" id="num" name="num" value="100"/>
+					<span class="cff-2">编码格式：</span>
+					<select id="charset" name="charset">
+						<option value="UTF-8">UTF-8</option>
+						<option value="GBK">GBK</option>
+						<option value="ISO-8859-1">ISO-8859-1</option>
+						<option value="GB2312">GB2312</option>
+					</select>&nbsp;&nbsp;&nbsp;&nbsp;
+					  <a  id="search" name="search"  style="margin-right: 10px;" class="easyui-linkbutton l-btn"><span class="l-btn-left"><span class="l-btn-text">查询</span></span></a>
+				 <a  href="javascript:void(0)"  onclick="javascript:history.go(-1)" id="saveButton" style="margin-right: 10px;" class="easyui-linkbutton l-btn"><span class="l-btn-left"><span class="l-btn-text">返回</span></span></a>
+			</header>
+			 <div>&nbsp;</div>
+			<div style="border: 1px solid #DDD; margin-left: 3%;width: 94%;margin-top: 0px; padding: 1px;" align="center">
+				<textarea id="lognr" style="width: 94%; height: 90%;" rows="18" cols="">
+				</textarea>
+			</div>
+</div>
+		<@sys.index_bottom/>
+</body>
+</html>

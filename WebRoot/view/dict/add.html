@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+<title>字典信息</title>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<@sys.script/>
+<script type="text/javascript" src="${path!}/view/dict/add.js"></script>
+</head>
+
+<body>
+	<@sys.index_top/>
+	<div class="ssxx-titlessxx">&nbsp;&nbsp;&nbsp;当前位置：字典管理 >> 添加</div>
+	<div>&nbsp;</div>
+	<form id="form1" style="margin-top: 10px;">
+		<table class="systemConfigTb"
+			style="width: 94%; left: 3%; position: absolute; margin-top: 43px; border: 1px solid #DDD;">
+			<tr height="40px;">
+				<td width="30%">字典名称：</td>
+				<td style="width: 455px;"><select style="width: 180px;" id="dictId" name="dictId">
+						<option value="10001">餐厅名称</option>
+						<option value="10002">积分类型</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td width="10%">字典项名：</td>
+				<td><input id="name" name="name"
+					style="width: 180px;" type="text" value="" dataType="Require"
+					msg="字典项名不能为空" /></td>
+			</tr>
+			<tr height="40px;">
+				<td>排序：</td>
+				<td><input id="seq" name="seq" style="width: 180px;"
+					type="text" value="999" dataType="Number" msg="排序必须为数字" /></td>
+			</tr>
+			<tr height="40px;">
+				<td>预留字段1：</td>
+				<td><input id="reserve1" name="reserve1" style="width: 180px;"
+					type="text" value="" dataType="Number" msg="预留字段1必须为数字" /></td>
+			</tr>
+			<tr>
+				<td>预留字段2：</td>
+				<td><input id="reserve2" name="reserve2" style="width: 180px;"
+					type="text" value="" /></td>
+			</tr>
+			<tr>
+				<td colspan="4" style="padding: 10px;">
+					<div style="text-align: center;">
+
+						<a href="javascript:void(0);" id="addbutton"
+							style="margin-right: 10px;" class="easyui-linkbutton l-btn"><span
+							class="l-btn-left"><span class="l-btn-text">保存</span></span></a> <a
+							href="javascript:void(0)" onclick="javascript:history.go(-1)"
+							id="saveButton" style="margin-right: 10px;"
+							class="easyui-linkbutton l-btn"><span class="l-btn-left"><span
+								class="l-btn-text">返回</span></span></a>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</form>
+	<@sys.index_bottom/>
+</body>
+</html>

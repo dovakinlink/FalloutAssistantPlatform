@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+<title>用户信息</title>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<@sys.script/>
+<script type="text/javascript" src="${path!}/view/user/add.js"></script>
+</head>
+
+<body>
+	<@sys.index_top/>
+	<div class="ssxx-titlessxx">&nbsp;&nbsp;&nbsp;当前位置：用户管理 >> 添加</div>
+	<div>&nbsp;</div>
+	<form id="form1" style="margin-top: 10px;">
+		<table  class="systemConfigTb" style="width: 94%; left: 3%; position: absolute; margin-top: 43px; border: 1px solid #DDD;">
+				<tr height="40px;">
+				<td width="10%">用户名：</td>
+				<td style="width: 455px;"> <input id="userName" name="userName" type="text" style="width: 180px;"
+						value="" dataType="Account" msg="用户名不能为空,只能为英文和数字组合,4到12位" /></td>
+				<td  width="10%">姓名：</td>
+				<td><input id="userRealName" name="userRealName"  style="width: 180px;"
+						type="text" value="" dataType="Require" msg="姓名不能为空" /></td>
+				</tr>
+				<tr height="40px;">
+				<td >密码：</td>
+				<td><input id="password" name="password"  style="width: 180px;"
+						type="password" value="" dataType="password"
+						msg="密码只能为数字和字母，长度6到12位" />
+					</td>
+				<td  >确认密码：</td>
+				<td><input id="password2" name="password2"   style="width: 180px;"
+						type="password" value="" dataType="password"
+						msg="密码只能为数字和字母，长度6到12位" /></td>
+				</tr>
+				<tr height="40px;">
+				<td  >用户类型：</td>
+				<td colspan="3"><select id="userType" name="userType"  style="width: 184px;margin-left: 0px;">
+						<option value="0" selected="selected">管理员</option>
+						<option value="1">第三方用户</option>
+					</select></td>
+				
+				</tr>
+				<tr>
+					<td colspan="4" style="padding: 10px;">
+					<div style="text-align: center;">
+		
+		  <a  href="javascript:void(0);" id="userbutton" style="margin-right: 10px;" class="easyui-linkbutton l-btn" ><span class="l-btn-left"><span class="l-btn-text">保存</span></span></a>
+		 <a  href="javascript:void(0)"  onclick="javascript:history.go(-1)" id="saveButton" style="margin-right: 10px;" class="easyui-linkbutton l-btn"><span class="l-btn-left"><span class="l-btn-text">返回</span></span></a>	
+		</div>
+					</td>
+				</tr>
+			</table>
+			</form>
+
+	
+		
+	<@sys.index_bottom/>
+</body>
+</html>

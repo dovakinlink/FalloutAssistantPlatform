@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+<title>用户信息</title>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<@sys.script/>
+<script type="text/javascript" src="${path!}/view/user/list.js"></script>
+<style type="text/css">
+a {
+	cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+<@sys.index_top/>
+	<div class="ssxx-titlessxx">&nbsp;&nbsp;&nbsp;当前位置：用户管理 >> 列表</div>
+	<div class="gb-sskcont22">
+		<a href="${path}/sso/user/index.do?url=user/add" id="saveButton"
+			style="margin-right: 10px;" class="easyui-linkbutton l-btn"><span
+			class="l-btn-left"><span class="l-btn-text">添加</span></span></a>
+
+	</div>
+	<div style="clear: both;">&nbsp;</div>
+	<input type="hidden" id="userId" name="userId"
+		value="${Session.sysUserSessionInfo.userId!}" />
+	<div class="module_content"
+		style="position: relative; top: -10px; padding-top: 0;">
+		<table class="tablesorter" cellspacing="0">
+			<thead>
+				<tr>
+					<th scope="col" style="width: 20%;">用户名</th>
+					<th style="width: 20%;">用户姓名</th>
+					<th style="width: 10%;">用户类型</th>
+					<th style="width: 20%;">最后登录时间</th>
+					<th style="width: 30%;">操作</th>
+				</tr>
+			</thead>
+
+			<tbody id="list_tmp" class="none">
+				<tr>
+					<td title="@{userName}">@{userName}</td>
+					<td title="@{userRealName}">@{userRealName}</td>
+					<td title="@{type}">@{type}</td>
+					<td title="@{lastLoginTime}">@{lastLoginTime}</td>
+					<td><a name="resetButton" data-id="@{userId}"><img
+							src="${path!}/css/themes/default/system/images/11.png"
+							title="重置密码" /></a>&nbsp;&nbsp; <a
+						href="${path}/sso/user/index.do?url=user/edit&userId=@{userId}"><img
+							src="${path!}/css/themes/default/system/images/xiugai.png"
+							title="编辑" /> </a> &nbsp;&nbsp;<a id="@{userId}" name="deleteButton"
+						data-id="@{userId}" href="javascript:void(0)"><img
+							src="${path!}/css/themes/default/system/images/del.png"
+							title="删除" /></a>&nbsp;&nbsp;</td>
+				</tr>
+			</tbody>
+		</table>
+		<@sys.page/>
+	</div>
+	<@sys.index_bottom/>
+	<input type="hidden" id="user_page_list" value="user_page" />
+</body>
+</html>

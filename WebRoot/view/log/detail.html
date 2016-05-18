@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>升级信息</title>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<@sys.script/>
+<script type="text/javascript" src="${path!}/view/log/detail.js"></script>
+</head>
+
+<body>
+	<@sys.index_top/>
+		  <div class="ssxx-titlessxx">&nbsp;&nbsp;&nbsp;当前位置：日志管理  >> 详细</div>
+		  <input type="hidden" id="logId" name="logId" value="${logId}" />
+		  <table  class="systemConfigTb" style="width: 94%;left: 3%;position: absolute; margin-top: 43px;border: 1px solid #DDD;">
+		<tr style="height: 26px;">
+			<td width="11%" class="addSj">类型:</td>
+			<td><span id="type"></span></td>
+			
+		</tr>
+		<tr style="height: 26px;">
+			<td>客户端标示:</td>
+			<td><span id="clientId"></span></td>
+			
+		</tr>
+		<tr style="height: 26px;">
+			<td>请求时间:</td>
+			<td><span id="createTime"></td>
+			
+		</tr>
+		<tr style="height: 26px;">
+			<td>请求内容:</td>
+			<td><textarea id="request" readonly="readonly" style="height: 150px; width:80%;"></textarea></td>
+			
+		</tr>
+		<tr style="height: 26px;">
+			<td>回复内容:</td>
+			<td><textarea id="result" readonly="readonly" style="height: 150px; width:80%;"></textarea></td>
+		</tr>
+		<tr style="height: 26px;">
+			<td colspan="2" align="center" style="padding: 10px;"> <a  href="javascript:void(0)"  onclick="javascript:history.go(-1)" id="saveButton" style="margin-right: 10px;" class="easyui-linkbutton l-btn"><span class="l-btn-left"><span class="l-btn-text">返回</span></span></a></td>
+		</tr>
+			<@sys.index_bottom/>
+</body>
+</html>
